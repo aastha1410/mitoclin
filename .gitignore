@@ -1,0 +1,28 @@
+# Reference files
+*.fasta
+*.fai
+*.dict
+*.bwt
+*.pac
+*.ann
+*.amb
+*.sa
+
+# Large bioinfo files
+*.bam
+*.sam
+*.vcf
+*.fastq
+*.gz
+
+# Outputs
+output_*/
+
+# Python
+__pycache__/
+*.pyc
+env/
+venv/
+
+# Logs
+logs/
