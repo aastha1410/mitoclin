@@ -1,4 +1,4 @@
-# 🧬 Mitoclin: Clinical mtDNA Analysis Pipeline
+#  Mitoclin: Clinical mtDNA Analysis Pipeline
 
 ---
 
