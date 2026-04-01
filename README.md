@@ -2,13 +2,13 @@
 
 ---
 
-## 📌 Introduction
+##  Introduction
 
 Mitoclin is an integrated bioinformatics pipeline and web-based application designed for the analysis and clinical interpretation of mitochondrial DNA (mtDNA) sequencing data. It combines multiple computational tools into a single automated workflow, enabling efficient and accurate genomic analysis for clinical applications.
 
 ---
 
-## ❗ Problem Statement
+##  Problem Statement
 
 Mitochondrial DNA analysis is challenging due to:
 
@@ -21,7 +21,7 @@ These challenges make mtDNA analysis time-consuming, error-prone, and difficult 
 
 ---
 
-## 🎯 What Mitoclin Does
+##  What Mitoclin Does
 
 Mitoclin solves these problems by providing:
 
@@ -35,7 +35,7 @@ Mitoclin solves these problems by providing:
 
 ---
 
-## 🧰 Tools Used
+##  Tools Used
 
 - FastQC → Quality control
 - Trim Galore → Read trimming
@@ -50,10 +50,69 @@ Mitoclin solves these problems by providing:
 
 ---
 
-## ⚙️ Installation
+## Installation & Setup 
 
-### 🔹 Step 1: Create Conda Environment
+### 1. Create Environment
 
 ```bash
-conda create -n mitoclin_env python=3.10 -y
-conda activate mitoclin_env
+conda create -n mitoclin python=3.10 -y
+conda activate mitoclin
+```
+
+---
+
+### 2. Install Required Tools
+
+```bash
+# Core bioinformatics tools
+conda install -c bioconda bwa samtools bcftools fastqc trim-galore -y
+
+# GATK (Mutect2)
+conda install -c bioconda gatk4 -y
+
+# HaploCheck (contamination analysis)
+conda install -c bioconda haplocheck -y
+```
+
+---
+
+### 3. Verify Installation
+
+```bash
+bwa
+samtools
+bcftools
+fastqc
+trim_galore
+gatk
+haplocheck
+```
+
+---
+
+## Usage (Run Mitoclin Pipeline)
+
+```bash
+bash mtdna_pipeline.sh \
+  -1 sample_R1.fastq.gz \
+  -2 sample_R2.fastq.gz \
+  -r whole_genome_mtdna.fasta \
+  -o output_sample
+```
+
+---
+
+## Output
+
+The pipeline generates:
+
+* Quality Control Reports (FastQC)
+* Trimmed Reads
+* Aligned BAM files
+* Variant Calls (VCF)
+* Heteroplasmy Analysis
+* Contamination Report (HaploCheck)
+* Final Annotated Report (TSV)
+
+---
+
