@@ -93,7 +93,7 @@ haplocheck
 ## Usage (Run Mitoclin Pipeline)
 
 ```bash
-bash mtdna_pipeline_new.sh \
+bash mtdna_pipeline.sh \
   -1 sample_R1.fastq.gz \
   -2 sample_R2.fastq.gz \
   -r rCRS.fasta \
