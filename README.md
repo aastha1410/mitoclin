@@ -93,9 +93,9 @@ haplocheck
 ## Usage (Run Mitoclin Pipeline)
 
 ```bash
-bash mtdna_pipeline.sh Sample\
-  Sample_R1.fastq.gz \
-  Sample_R2.fastq.gz \
+bash mtdna_pipeline.sh sample\
+  sample_R1.fastq.gz \
+  sample_R2.fastq.gz \
   rCRS.fasta
 ---
 
